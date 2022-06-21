@@ -1,0 +1,81 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #ebf3ff;
+}
+nav {
+  height: 20vh;
+  width: 70vw;
+  min-width: 600px;
+  display: flex;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+  background-color: #f8fbfd;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.arrow {
+  border: solid #ec6881;
+  border-width: 0 3px 3px 0;
+  display: flex;
+  padding: 3px;
+  margin-right: 18px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+  font-family: "poppins", sans-serif;
+  color: #6f728d;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  padding: 0 10px;
+}
+
+a:after {
+  content: "";
+  position: absolute;
+  background-color: #ec6881;
+  height: 3px;
+  width: 100;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+a.active::after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 100%;
+  background-color: #ff105e;
+  left: 0;
+  bottom: -7px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  animation: appear 0.2s linear;
+}
+
+a:hover {
+  color: #332fd0;
+}
+a:hover:after {
+  width: 100%;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
